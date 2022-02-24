@@ -1,6 +1,13 @@
-## Welcome to GitHub Pages
+## Welcome to thinking... 
 
-You can use the [editor on GitHub](https://github.com/NimaSarajpoor/NimaSarajpoor.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Work in Progress[WIP]
+
+This is a meeting venue where my friends machine learning, statistics, and programming talk to each other! I have been creating a set of notebooks to help myself better understand the book "Introduction to Statistical Learning" in an interactive way. Here is my suggestion:
+
+1. I recommend to go through each chapter of the book before reading its corresponding notebook. 
+2. I should also recommend to avoid getting stuck by it. Because, you may feel being lost in some parts but you may find its explanation in the notebook.
+3. From time to time, you may find ? mark in my notebooks. This is where I cannot understand the topic or I felt my explanation is not clear. Feel free to open an issue on the githup repo ...
+
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
