@@ -9,8 +9,8 @@ body {
     max-width: 400px;
     margin: 0 auto;
     background-color: white;
-    border: black;
-    border-width: thin;
+    border: 1px solid black;
+    border-width: medium;
 }
 
 h1 {
