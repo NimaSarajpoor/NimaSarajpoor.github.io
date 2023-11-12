@@ -6,8 +6,11 @@ html {
 
 body {
     min-height: 100vh;
+    max-width: 400px;
     margin: 0 auto;
     background-color: white;
+    border: black;
+    border-width: thin;
 }
 
 h1 {
