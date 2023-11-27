@@ -35,6 +35,14 @@ p {
     text-align: justify;
 }
 
+ 
+li{
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
 
 img {
     display: block;
