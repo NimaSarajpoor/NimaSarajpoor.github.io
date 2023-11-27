@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-    font-size:  5.9 vw; /* 40px; */
+    font-size:  40px; /* 5.9 vw; */
     text-align: center;
     margin: 0;
     padding: 20px 0;
@@ -21,15 +21,14 @@ h1 {
 }
 
 h2 {
-    font-size:  3.0 vh; 
+    font-size:  30px;  /* 3.0 vh; */
     text-align: left;
     margin: 0;
     padding: 20px 0;
     color: black;
 }
 
-p
-li {
+p {
     font-size: 16px;
     line-height: 2;
     letter-spacing: 1px;
