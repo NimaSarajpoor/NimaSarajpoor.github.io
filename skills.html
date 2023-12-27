@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en-US">
-
   <head>
     <link href="styles/style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans"
@@ -11,41 +10,71 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title> Skills </title>
+    <style>
+      figcaption {
+        color: black;
+        font-style: bold;
+        padding: 5px;
+        text-align: center;
+      }
+
+      .tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .tab:hover {
+            background-color: #ddd;
+        }
+
+        .tab.active {
+            background-color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+
+      </style>
+
+    <title> Home Page</title>
   </head>
 
   <body>
-    <h1>
-      Data Science Realm
-    </h1>
+    
 
-    <nav>
-      <ul>
-        <li> <a href="./index.html"> Index</a> </li>
-        <li> <a href="./about.html"> About me</a> </li>
-        <li> <a href="./skills.html"> Skills</a> </li>
-        <li> <a href="./projects.html"> Projects</a> </li>
-        <li> <a href="./notes.html"> Notes </a></li>
-      </ul>
-    </nav>
-
-    <section>
-        <h2 id=""> Skills </h2>
-        <ul> 
-          <li>Python: numpy, pandas, and scipy</li>
-          <li>linter tools: black and flake8</li>
-          <li>unit testing tools: pytest</li>
-          <li>shell scripting</li>
-          <li>git: version control</li>
-          <li>github actions workflow</li>
-          <li>SQL</li>
-          <li>pyspark</li>
-          <li>cloud: microsoft azure </li>
-          <li>machine learning: supervised and unsupervised learning </li>
-          <li>time series analysis </li>
-        </ul>
-      </section>
+    <ul class="tabs">
+      <li class="tab"><a href="./index.html">Index</a></li>
+      <li class="tab"><a href="./about.html">About me</a></li>
+      <li class="tab"><a href="./skills.html">Skills</a></li>
+      <li class="tab"><a href="./projects.html">Projects</a></li>
+      <li class="tab"><a href="./notes.html">Notes</a></li>
+    </ul>
   
+    <section>
+      <h2 id=""> Skills </h2>
+      <ul> 
+        <li>Python: numpy, pandas, and scipy</li>
+        <li>linter tools: black and flake8</li>
+        <li>unit testing tools: pytest</li>
+        <li>shell scripting</li>
+        <li>git: version control</li>
+        <li>github actions workflow</li>
+        <li>SQL</li>
+        <li>pyspark</li>
+        <li>cloud: microsoft azure </li>
+        <li>machine learning: supervised and unsupervised learning </li>
+        <li>time series analysis </li>
+      </ul>
+    </section>
+    
   </body>
-
-</html> 
+</html>

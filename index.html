@@ -17,25 +17,47 @@
         padding: 5px;
         text-align: center;
       }
+
+      .tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .tab:hover {
+            background-color: #ddd;
+        }
+
+        .tab.active {
+            background-color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+
       </style>
 
     <title> Home Page</title>
   </head>
 
   <body>
-    <h1>
-      Data Science Realm
-    </h1>
+    
 
-    <nav>
-      <ul>
-        <li> <a href="./index.html"> Index</a> </li>
-        <li> <a href="./about.html"> About me</a> </li>
-        <li> <a href="./skills.html"> Skills</a> </li>
-        <li> <a href="./projects.html"> Projects</a> </li>
-        <li> <a href="./notes.html"> Notes </a></li>
-      </ul>
-  </nav>
+    <ul class="tabs">
+      <li class="tab"><a href="./index.html">Index</a></li>
+      <li class="tab"><a href="./about.html">About me</a></li>
+      <li class="tab"><a href="./skills.html">Skills</a></li>
+      <li class="tab"><a href="./projects.html">Projects</a></li>
+      <li class="tab"><a href="./notes.html">Notes</a></li>
+    </ul>
   
     Weclome to my blog! [WIP]
     

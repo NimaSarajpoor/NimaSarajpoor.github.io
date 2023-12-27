@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en-US">
-
   <head>
     <link href="styles/style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans"
@@ -11,51 +10,80 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title> About </title>
+    <style>
+      figcaption {
+        color: black;
+        font-style: bold;
+        padding: 5px;
+        text-align: center;
+      }
+
+      .tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .tab:hover {
+            background-color: #ddd;
+        }
+
+        .tab.active {
+            background-color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+
+      </style>
+
+    <title> About me</title>
   </head>
 
   <body>
-    <h1>
-      Data Science Realm
-    </h1>
 
-    <nav>
-      <ul>
-        <li> <a href="./index.html"> Index</a> </li>
-        <li> <a href="./about.html"> About me</a> </li>
-        <li> <a href="./skills.html"> Skills</a> </li>
-        <li> <a href="./projects.html"> Projects</a> </li>
-        <li> <a href="./notes.html"> Notes </a></li>
-      </ul>
-    </nav>
-
+    <ul class="tabs">
+      <li class="tab"><a href="./index.html">Index</a></li>
+      <li class="tab"><a href="./about.html">About me</a></li>
+      <li class="tab"><a href="./skills.html">Skills</a></li>
+      <li class="tab"><a href="./projects.html">Projects</a></li>
+      <li class="tab"><a href="./notes.html">Notes</a></li>
+    </ul>
 
     <section>
 
-      <figure>
-        <img 
-          src="images/Nima_Profile.jpeg" 
-          alt=""
-          height=200
-          width=200 />
-          <figcaption>
-            <!-- This is me! -->
-          </figcaption>
-          
-      </figure>
-
-      <h2 id=""> About me </h2>
-      <p>
-        My name is Nima (NEE-Ma). What you see here is created by HTML and CSS! Not that facny
-        but I like it as it is cooked by me alone!
-        <br>
-        <br>
-        I did my PhD in analyzing renewable energy data from which
-        I published three journal papers. I sometimes contribute to open-source
-        projects. I am currently working as data sicentist in the financial
-        corporation <a href=https://g.co/kgs/jVsvoh> Manulife</a>.  
-      </p>
-    </section>
+        <figure>
+          <img 
+            src="images/Nima_Profile.jpeg" 
+            alt=""
+            height=200
+            width=200 />
+            <figcaption>
+              <!-- This is me! -->
+            </figcaption>
+            
+        </figure>
+  
+        <h2 id=""> About me </h2>
+        <p>
+          My name is Nima (NEE-Ma). What you see here is created by HTML and CSS! Not that facny
+          but I like it as it is cooked by me alone!
+          <br>
+          <br>
+          I did my PhD in analyzing renewable energy data from which
+          I published three journal papers. I sometimes contribute to open-source
+          projects. I am currently working as data sicentist in the financial
+          corporation <a href=https://g.co/kgs/jVsvoh> Manulife</a>.  
+        </p>
+      </section>
+    
   </body>
-
-</html> 
+</html>
