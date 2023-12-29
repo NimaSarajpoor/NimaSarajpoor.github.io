@@ -61,9 +61,26 @@
   
     <section>
       <h2 id=""> Notes </h2>
-      <p>
-        TBC
-      </p>
+      <h3>
+        How to use explore different git branches and look for something?
+      </h3>
+
+      In some occastions, you may face a repo of a legacy code with many branches. And, you may need to look for something
+      in those branches as you do not know exactly which branch has that item. For instance, I recently encountered a repo
+      with many branches and I needed to look for a few specific terms. 
+
+      How should I do that? 
+      One idea is to just do `git checkout <branch_name>` and then search in some of its directories. For that search part,
+      we use `grep` command in terminal to check all files in a directory. But, what about the branches? We can execute
+      the git command from a shell script that iterates over all branches. For the sake of simplicity, I am going to do 
+      it for the local branches only.
+      
+      <br>
+      <br>
+      <strong>Here is the script:</strong> 
+      <br>
+      <br>
+      <script src="https://gist.github.com/NimaSarajpoor/1156fac79847786e69da921e1173bb90.js"></script>
     </section>
     
   </body>
