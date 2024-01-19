@@ -61,8 +61,13 @@
   
     <section>
       <h2 id=""> Notes </h2>
+    <section>
+    
+    <br>
+    
+    <section>
       <h3>
-        How to explore different git branches and look for something, quickly?
+       1.  How to explore different git branches and look for something, quickly?
       </h3>
 
       In some occastions, you may face a repo of a legacy code with many branches. And, you may need to look for something
@@ -80,10 +85,61 @@
       <br>
       <br>
       <script src="https://gist.github.com/NimaSarajpoor/1156fac79847786e69da921e1173bb90.js"></script>
-    </section>
-    
-      <br>
-      <br>
       And, that's it! Hope you have enjoyed it.
+    </section>
+
+
+
+    <section>
+      <h3>
+        2. You may have noticed *args and **kwargs in some Python code. What are they?
+      </h3>
+
+        These two are used to pass a variable number of arguments to a function. The *args 
+        will take the positional arguments and give them to you as a tuple. The **kwargs will
+        give you the keyword arguments as a dictionary! But, what are positional and keyword arguments?
+
+        Let's learn this by checking an example. 
+        <br>
+        <br>
+        <script src="https://gist.github.com/NimaSarajpoor/4be5f32aff94fb35e3e0206ff8f5452c.js"></script>
+        
+        In the above example, we have a function called `example_func` that takes two positional arguments and two keyword arguments.
+        The positional arguments are `arg1` and `arg2` and the keyword arguments are `kwarg1` and `kwarg2`.
+        It is called positional because the order of the arguments matters. On the other hand, the keyword arguments are called so because
+        they are identified by their names. So, the order of the keyword arguments does not matter. Note that 
+        all keyword arguments must come after the positional arguments.
+
+        Okay! Now, let's say you want to write a function that takes a function and its arguments as input and then executes the function
+        with those arguments. For instance, you want to have a function that determines whether the output of another function is None or not! 
+        How would you do that? You can use *args and **kwargs to do that!
+        
+        <br>
+        <br>
+        <script src="https://gist.github.com/NimaSarajpoor/647b94056cf220fccd78d13a2f879439.js"></script>
+
+        Note that I do not know how many arguments the function `func` takes. So, I use *args and **kwargs to pass the arguments to it.
+
+        So far, we have not digged into the details of *args and **kwargs. Now, let's see how they store the information!
+        <br>
+        <br>
+        Let's say I want to pass `example_func` as the first argument of the function 
+        `check_return`. So, I can do it like this: 
+        
+        <br>
+        `check_return(example_func, 1, 2, kwarg1=3, kwarg2=4)`
+        <br>
+        And then, this is what we will have:
+        <br>
+        args = (1, 2) 
+        <br>
+        kwargs = {'kwarg1': 3, 'kwarg2': 4}
+
+        <br>
+        So, whenever we pass this as *args and/or **kwargs, it will expand them again and pass them to function!
+
+
+    </section>    
+      
   </body>
 </html>
