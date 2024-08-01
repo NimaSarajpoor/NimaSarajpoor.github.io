@@ -102,15 +102,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>pwd</li>
 <li>ls</li>
-<li>mkdir</li>
-<li>cp</li>
-<li>rm</li>
-<li>touch</li>
-<li>uname</li>
+<li>cp: copy file</li>
+<li>mv: move file</li>
+<li>rm: remove file</li>
+<li>rmdir: remove directory</li>
+<li>mkdir: create directory</li>
+<li>touch: create file</li>
+<li>uname: retreive important information about system</li>
 </ul>
-<p>Let’s start from the first command, <code>pwd</code>. In jupyter notebook, we can run it by adding a leading exclamation mark.</p>
-<div id="7148a5ee-1964-4bb2-86af-cc0a6468b80b" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>uname  <span class="co"># pwd: print working directory</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In jupyter notebook, we can run it by adding a leading exclamation mark.</p>
+<div id="7148a5ee-1964-4bb2-86af-cc0a6468b80b" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>uname </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Darwin</code></pre>
 </div>
@@ -122,6 +124,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>ls -a</code> will list ALL subdirectories and files, including the dot files.</li>
 <li><code>ls -l</code> will list the subdirectories and files while including the permission for write/read/execute access.</li>
 </ul>
+<p><strong>Note:</strong> Shell scripting is a bit different as it is about collecting a set of commandas and running them together one afther another. It gives you a power for manipulating files. So, let’s say you want to reduce the running time of a function. To manage different versions of the same function, you use <code>git</code> (Read more here: https://nimasarajpoor.github.io/learn_git/Git.html), and have different versions of the same function in different branches. But, how are you going to compare the results? One way is to switch between branches and run the code. Another way is to write a shell script that <code>checkout</code> each branch, run the script, and write the result into a text file.</p>
+<pre class="shell"><code>#!/bin/bash
+
+git checkout main
+
+rm -rf runtime_data.txt
+touch runtime_data.txt
+ 
+for i in "$@"
+do
+echo "branch: $i" &gt;&gt; runtime_data.txt
+git checkout $i | python check_runtime.py | tee -a runtime_data.txt
+echo "-----------------------------------" &gt;&gt; runtime_data.txt
+done
+
+git checkout main</code></pre>
+<section id="some-resources" class="level4">
+<h4 class="anchored" data-anchor-id="some-resources">Some resources:</h4>
+<ul>
+<li>https://www.learnshell.org</li>
+<li>https://ryanstutorials.net/bash-scripting-tutorial/</li>
+<li><a href="https://www.youtube.com/playlist?list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c">Corey Schafer Videos</a></li>
+</ul>
+</section>
 </section>
 
 </main>
