@@ -80,7 +80,18 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Note:</strong> In case you are wondering “why not just copy it?”: Although you can copy the content of directory and start working on your stuff, it can become difficult to update the project by merging it to main. Furtherfore, you will not be able to track your own changes easily later.</p>
 <p>Let’s say you are in the main branch, and you want to create a new branch called <code>new-branch</code>. To achieve this, run the following command:</p>
 <pre><code>git checkout -b new-branch</code></pre>
-<p>This will create the new branch <code>new-branch</code> and you are already moved to this branch. So, whatever changes you make on your files will be on this branch. Let’s create a file called <code>test_file.txt</code> and write <code>hello world!</code> in it. Let’s close and save it. Note that the change can be observed but it is not saved on this branch.</p>
+<p>This will create the new branch <code>new-branch</code> and you are already moved to this branch. So, whatever changes you make on your files will be on this branch. Let’s create a file called <code>test_file.txt</code> and write <code>hello world!</code> in it. Let’s save and close it. Now try to run <code>git status</code> in the terminal. You will see the file is untracked. Now, if you switch branches, you can still see the untracked file. To add this file to that branch, you can do: <code>git add test_file.txt</code>. This will put file in the “staged” mode. This means the file is ready to be “commit”-ed to the branch. You can have several files in the “staged” mode, and finalize those changes by one commit. To commit, run: <code>git commit -m "MY COMMIT MESSAGE"</code>. The change you made is now commited to the branch. If you do <code>git log --oneline</code>, you should be able to see a list of commits, where the latest one is the one you commited recently. You can use the commit id, and do something like: <code>git show &lt;COMMIT-ID&gt;</code> to see it. But, let’s say you forgot to add another change and you prefer to have one commit for both rather than creating a new commit. SO, you can do: <code>git reset --soft HEAD~1</code>. This will reset the latest commit by brining it back to the “staged” mode. You can then do <code>git add &lt;NEW-CHANGED-FILE&gt;</code> and brings that file to the “staged” mode as well, and then do: <code>git commit -m &lt;COMMIT MESSAGE&gt;</code>. What if you decide to completely disregard your latest commit? It can easily be done by running: <code>git reset --hard HEAD~1</code>.</p>
+<p>There are other few things that I am going to just name it here: * <code>git branch -a</code> or <code>git branch -l</code> * <code>git merge &lt;from-branch&gt;</code> * <code>git diff &lt;File_Name&gt;</code> or <code>git diff --staged &lt;File-Name&gt;</code></p>
+</section>
+<section id="some-resources-to-learn-git" class="level3">
+<h3 class="anchored" data-anchor-id="some-resources-to-learn-git">Some resources to learn git</h3>
+<ul>
+<li>https://learngitbranching.js.org</li>
+<li>https://ohshitgit.com</li>
+<li>http://up1.github.io/git-guide/index.html</li>
+<li>https://gitimmersion.com/index.html</li>
+<li><a href="https://www.udemy.com/course/intro-to-git/?LSNPUBID=JVFxdTr9V80&amp;ranEAID=JVFxdTr9V80&amp;ranMID=39197&amp;ranSiteID=JVFxdTr9V80-V9dzX8_3GCYGG4Gi83NRKw&amp;utm_medium=udemyads&amp;utm_source=aff-campaign">Udemy git course</a></li>
+</ul>
 </section>
 </section>
 
