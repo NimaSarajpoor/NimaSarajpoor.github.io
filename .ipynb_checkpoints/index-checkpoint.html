@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en-US">
+  <head>
+    <link href="styles/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet" />
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+      figcaption {
+        color: black;
+        font-style: bold;
+        padding: 5px;
+        text-align: center;
+      }
+
+      .tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .tab:hover {
+            background-color: #ddd;
+        }
+
+        .tab.active {
+            background-color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+
+        .container {
+          padding: 15px;
+        }
+
+      </style>
+
+    <title> Home Page</title>
+  </head>
+
+  <body>
+    
+
+    <ul class="tabs">
+      <li class="tab"><a href="./index.html">Index</a></li>
+      <li class="tab"><a href="./about.html">About me</a></li>
+      <li class="tab"><a href="./skills.html">Skills</a></li>
+      <li class="tab"><a href="./projects.html">Projects</a></li>
+      <li class="tab"><a href="./notes.html">Notes</a></li>
+    </ul>
+    
+    <div class="container"> 
+      <a href="./selected_books/Book.html">Some Books</a>
+      <br>
+      <a href="./learn_git/Git.html">Git</a>
+      <br>
+      <a href="./learn_shell/Shell_basics.html">Shell</a>
+      <br>
+      <a href="./learn_sql/sql_basics.html">SQL</a>
+      <br>
+      <a href="./learn_Statistical_Learning/ISL.html">Introduction to Statistical Learning</a>
+    </div>
+
+
+  </body>
+</html>
